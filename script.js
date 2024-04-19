@@ -1,7 +1,7 @@
 const body = document.body;
 
-const btnTheme = document.querySelector(".fa-moon");
-const btnHamburger = document.querySelector(".fa-bars");
+const btnTheme = document.querySelector(".nev-moon");
+const btnHamburger = document.querySelector(".nev-bars");
 
 const addThemeClass = (bodyClass, btnClass) => {
   body.classList.add(bodyClass);
@@ -26,20 +26,20 @@ const setTheme = (bodyClass, btnClass) => {
 };
 
 const toggleTheme = () =>
-  isDark() ? setTheme("light", "fa-moon") : setTheme("dark", "fa-sun");
+  isDark() ? setTheme("light", "nev-moon") : setTheme("dark", "nev-sun");
 
 btnTheme.addEventListener("click", toggleTheme);
 
 const displayList = () => {
   const navUl = document.querySelector(".nav__list");
 
-  if (btnHamburger.classList.contains("fa-bars")) {
-    btnHamburger.classList.remove("fa-bars");
-    btnHamburger.classList.add("fa-times");
+  if (btnHamburger.classList.contains("nev-bars")) {
+    btnHamburger.classList.remove("nev-bars");
+    btnHamburger.classList.add("nev-times");
     navUl.classList.add("display-nav-list");
   } else {
-    btnHamburger.classList.remove("fa-times");
-    btnHamburger.classList.add("fa-bars");
+    btnHamburger.classList.remove("nev-times");
+    btnHamburger.classList.add("nev-bars");
     navUl.classList.remove("display-nav-list");
   }
 };
